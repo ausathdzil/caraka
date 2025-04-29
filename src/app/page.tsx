@@ -41,15 +41,15 @@ export default function Home() {
       </header>
 
       <main className="flex flex-col items-center justify-center gap-8 lg:gap-16">
-        <div className="px-8 lg:px-24 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-16">
+        <div className="p-8 lg:px-24 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-16">
           <div className="flex flex-col items-center lg:items-start gap-8">
             <article className="space-y-4 text-center lg:text-left max-w-lg">
               <h1 className="text-2xl lg:text-6xl font-serif font-medium">
                 All-in-one Javanese Script Translator
               </h1>
               <p className="text-xs lg:text-lg">
-                Whether you*&apos;re a student, tourist, or just curious to
-                learn about Javanese script, Caraka is here to help you.
+                Whether you&apos;re a student, tourist, or just curious to learn
+                about Javanese script, Caraka is here to help you.
               </p>
             </article>
             <div className="flex flex-col lg:flex-row gap-4">
@@ -61,7 +61,12 @@ export default function Home() {
               </Button>
             </div>
           </div>
-          <Image src="hero.svg" alt="Hero" width={450} height={450} />
+          <Image
+            src="hero.svg"
+            alt="Student studying"
+            width={450}
+            height={450}
+          />
         </div>
 
         <div className="px-8 lg:px-24 flex flex-col items-center justify-center gap-8 lg:gap-16">
@@ -72,7 +77,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-8">
               <Image
                 src="/context-aware.svg"
-                alt="Machine Learning"
+                alt="Machine learning"
                 width={250}
                 height={250}
               />
@@ -88,7 +93,12 @@ export default function Home() {
             </div>
 
             <div className="flex flex-col items-center justify-center gap-4 lg:gap-8">
-              <Image src="/ocr.svg" alt="OCR" width={250} height={250} />
+              <Image
+                src="/ocr.svg"
+                alt="Image upload"
+                width={250}
+                height={250}
+              />
               <article className="text-center space-y-2">
                 <h3 className="text-lg lg:text-3xl font-serif font-medium">
                   Powerful OCR Engine
@@ -103,7 +113,7 @@ export default function Home() {
             <div className="flex flex-col items-center justify-center gap-8">
               <Image
                 src="/billingual.svg"
-                alt="Machine Learning"
+                alt="Globe"
                 width={250}
                 height={250}
               />
@@ -121,7 +131,12 @@ export default function Home() {
         </div>
 
         <div className="w-full flex flex-col items-center justify-center gap-4 lg:gap-8 py-16 mt-16 bg-accent/50">
-          <Image src="/journey.svg" alt="Journey" width={200} height={200} />
+          <Image
+            src="/journey.svg"
+            alt="Rocket to the moon"
+            width={200}
+            height={200}
+          />
           <article className="text-center lg:space-y-4 max-w-3/4">
             <h2 className="text-xl lg:text-5xl font-serif font-medium">
               Start Your Journey
@@ -140,11 +155,14 @@ export default function Home() {
       </main>
 
       <footer className="py-8">
-        <div className="flex flex-col lg:flex-row items-start lg:justify-between gap-8 px-8 lg:px-24">
+        <div className="flex flex-col lg:flex-row items-start lg:justify-between gap-4 px-8 lg:px-24">
           <p>© 2025 Caraka</p>
-          <div className="hidden gap-2">
+          <div className="flex items-center gap-2">
             <LanguagesIcon size={16} />
-            <select disabled>
+            <label htmlFor="lang" className="sr-only">
+              Language
+            </label>
+            <select id="lang" disabled>
               <option value="en">English</option>
               <option value="id">Bahasa Indonesia</option>
             </select>
