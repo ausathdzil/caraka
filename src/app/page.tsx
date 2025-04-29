@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function Home() {
   return (
-    <div className="flex flex-col">
+    <>
       <header className="w-full px-8 lg:px-24 py-4 border-b">
         <nav>
           <ul className="relative flex items-center justify-between">
@@ -175,6 +175,6 @@ export default function Home() {
           </div>
         </div>
       </footer>
-    </div>
+    </>
   );
 }
