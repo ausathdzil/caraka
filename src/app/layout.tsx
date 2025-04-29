@@ -1,5 +1,17 @@
+import { cn } from '@/lib/utils';
 import type { Metadata } from 'next';
+import { Inter, Noto_Serif } from 'next/font/google';
 import './globals.css';
+
+const inter = Inter({
+  subsets: ['latin'],
+  variable: '--font-inter',
+});
+
+const notoSerif = Noto_Serif({
+  subsets: ['latin'],
+  variable: '--font-noto-serif',
+});
 
 export const metadata: Metadata = {
   title: 'Caraka',
@@ -13,7 +25,15 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body
+        className={cn(
+          inter.variable,
+          notoSerif.variable,
+          'font-sans font-medium antialiased'
+        )}
+      >
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRightIcon, LanguagesIcon } from 'lucide-react';
+import { ArrowRightIcon, LanguagesIcon, ScanTextIcon } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 
@@ -30,10 +30,10 @@ export default function Home() {
             </div>
             <li className="hidden lg:block z-20 space-x-4">
               <Button asChild variant="secondary">
-                <Link href="#">Login</Link>
+                <Link href="/login">Log In</Link>
               </Button>
               <Button asChild>
-                <Link href="#">Get Started</Link>
+                <Link href="/signup">Get Started</Link>
               </Button>
             </li>
           </ul>
@@ -44,20 +44,26 @@ export default function Home() {
         <div className="p-8 lg:px-24 flex flex-col-reverse lg:flex-row items-center justify-center lg:gap-16">
           <div className="flex flex-col items-center lg:items-start gap-8">
             <article className="space-y-4 text-center lg:text-left max-w-lg">
-              <h1 className="text-2xl lg:text-6xl font-serif font-medium">
-                All-in-one Javanese Script Translator
+              <h1 className="text-2xl lg:text-6xl font-serif font-semibold">
+                All-In-One Javanese Script Translator
               </h1>
-              <p className="text-xs lg:text-lg">
+              <p className="text-xs lg:text-base">
                 Whether you&apos;re a student, tourist, or just curious to learn
                 about Javanese script, Caraka is here to help you.
               </p>
             </article>
             <div className="flex flex-col lg:flex-row gap-4">
               <Button size="lg" asChild>
-                <Link href="#">Try Scanner</Link>
+                <Link href="#">
+                  <ScanTextIcon />
+                  Try Scanner
+                </Link>
               </Button>
               <Button size="lg" variant="secondary" asChild>
-                <Link href="#">Transliterate Hanacaraka</Link>
+                <Link href="#">
+                  <LanguagesIcon />
+                  Transliterate Hanacaraka
+                </Link>
               </Button>
             </div>
           </div>
@@ -70,7 +76,7 @@ export default function Home() {
         </div>
 
         <div className="px-8 lg:px-24 flex flex-col items-center justify-center gap-8 lg:gap-16">
-          <h2 className="text-xl lg:text-5xl text-center font-serif font-medium">
+          <h2 className="text-xl lg:text-5xl text-center font-serif font-semibold">
             Our Features
           </h2>
           <div className="grid lg:grid-cols-3 items-center justify-center gap-8">
@@ -82,10 +88,10 @@ export default function Home() {
                 height={250}
               />
               <article className="text-center space-y-2">
-                <h3 className="text-lg lg:text-3xl font-serif font-medium">
+                <h3 className="text-lg lg:text-3xl font-serif font-semibold">
                   Context-Aware Translation
                 </h3>
-                <p className="text-xs lg:text-base">
+                <p className="text-xs lg:text-base font-normal">
                   Caraka can understand the deeper meaning behind every phrase
                   for more accurate translations
                 </p>
@@ -100,10 +106,10 @@ export default function Home() {
                 height={250}
               />
               <article className="text-center space-y-2">
-                <h3 className="text-lg lg:text-3xl font-serif font-medium">
+                <h3 className="text-lg lg:text-3xl font-serif font-semibold">
                   Powerful OCR Engine
                 </h3>
-                <p className="text-xs lg:text-base">
+                <p className="text-xs lg:text-base font-normal">
                   Accurately recognize Javanese script, even from challenging
                   inputs like photos or handwriting
                 </p>
@@ -118,10 +124,10 @@ export default function Home() {
                 height={250}
               />
               <article className="text-center space-y-2">
-                <h3 className="text-lg lg:text-3xl font-serif font-medium">
+                <h3 className="text-lg lg:text-3xl font-serif font-semibold">
                   Bilingual Output
                 </h3>
-                <p className="text-xs lg:text-base">
+                <p className="text-xs lg:text-base font-normal">
                   Seamlessly convert language used with Javanese script to
                   Indonesian and English
                 </p>
@@ -138,7 +144,7 @@ export default function Home() {
             height={200}
           />
           <article className="text-center lg:space-y-4 max-w-3/4">
-            <h2 className="text-xl lg:text-5xl font-serif font-medium">
+            <h2 className="text-xl lg:text-5xl font-serif font-semibold">
               Start Your Journey
             </h2>
             <p className="text-xs lg:text-lg">
